@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Ionic Table using Ionic grid component
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-margin">
+  <ion-grid class="ion-margin" >
+    <ion-row>
+      <ion-col>GA</ion-col>
+      <ion-col>Previous Day</ion-col>
+      <ion-col>Previous Day Ind.</ion-col>
+      <ion-col>Total sales previous day</ion-col>
+    </ion-row>
+    <ion-row class="row_2">
+      <ion-col></ion-col>
+      <ion-col>CNG(KG)</ion-col>
+      <ion-col>SCM</ion-col>
+      <ion-col>SCM</ion-col>
+    </ion-row>
+ 
+    <ion-row *ngFor="let student of students">
+       <ion-col>{{ student.ganame }}</ion-col>
+      <ion-col>{{ student.name}}</ion-col>
+      <ion-col>{{ student.gender }}</ion-col>
+      <ion-col>{{ student.country }}</ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
